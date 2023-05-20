@@ -11,9 +11,35 @@ body {
     justify-content: center;
 }
 
+.c-carousel__navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.c-carousel__nav-arrow {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    margin-inline: 5px;
+}
+
+.c-carousel__nav-arrow--left:before {
+    content: "←";
+}
+
+.c-carousel__nav-arrow--right:before {
+    content: "→";
+}
+
 .c-carousel {
-    max-width: 1000px;
     margin-top: 200px;
+}
+
+.c-carousel__wrapper {
+    max-width: 1000px;
     display: flex;
     overflow: hidden;
     position: relative;
