@@ -26,6 +26,10 @@ body {
     margin-inline: 5px;
 }
 
+.c-carousel__nav-arrow:hover {
+    background-color: brown;
+}
+
 .c-carousel__nav-arrow--left:before {
     content: "←";
 }
