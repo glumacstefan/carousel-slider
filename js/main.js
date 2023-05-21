@@ -21,7 +21,7 @@ window.onload = function () {
           slide.style.transform = `translateX(-${currSlide * slideWidth}px)`;
        });
 
-       if ((firstSlide, getBoundingClientRect().left >= 0)) {
+       if (firstSlide.getBoundingClientRect().left >= 0) {
           prev.disabled = true;
        }
     }
