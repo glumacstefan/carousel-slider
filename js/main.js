@@ -10,5 +10,36 @@ window.onload = function () {
     let firstSlide = slides[0];
     let lastSlide = slides[slides.length - 1];
 
+    prev.disabled = true;
 
+    function slideLeft() {
+       next.disabled = false;
+       currSlide--;
+
+       slides.forEach((slide) => {
+          slide.style.transition = 'transform 0.2s linear';
+          slide.style.transform = `translateX(-${currSlide * slideWidth}px)`;
+       });
+
+       if ((firstSlide, getBoundingClientRect().left >= 0)) {
+          prev.disabled = true;
+       }
+    }
+
+    function slideRight() {
+       prev.disabled = false;
+       currSlide++;
+
+       slides.forEach((slide) => {
+          slide.style.transition = 'transform 0.2s linear';
+          slide.style.transform = `translateX(-${currSlide * slideWidth}px)`;
+       });
+
+       if (lastSlide.getBoundingClientRect().right <= carousel.getBoundingClientRect().right) {
+          next.disabled = true;
+       }
+    }
+
+    prev.addEventListener('click', slideLeft);
+    next.addEventListener('click', slideRight);
 };
