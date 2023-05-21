@@ -51,5 +51,5 @@ window.onload = function () {
        } else if (key === 'ArrowRight' && next.disabled !== true) {
           slideRight();
        }
-    });
+    }); 
 };
