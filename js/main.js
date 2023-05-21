@@ -42,4 +42,14 @@ window.onload = function () {
 
     prev.addEventListener('click', slideLeft);
     next.addEventListener('click', slideRight);
+
+
+    window.addEventListener('keydown', function (event) {
+       let key = event.key;
+       if (key === 'ArrowLeft' && prev.disabled !== true) {
+          slideLeft();
+       } else if (key === 'ArrowRight' && next.disabled !== true) {
+          slideRight();
+       }
+    });
 };
