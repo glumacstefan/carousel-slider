@@ -12,7 +12,6 @@
 node_modules/
 source/css/
 .tmp/
-package-lock.json
 
 # OS or Editor folders
 .DS_Store
